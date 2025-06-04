@@ -23,7 +23,7 @@ export default function IconFeatureCard(props) {
     >
 
       <div
-        className={`h-[64px] w-[64px] mb-[24px] rounded-md flex justify-center items-center text-black ${bgClass}`}
+        className={`h-[64px] w-[64px] mb-[24px] rounded-md flex justify-center items-center text-labelsIcons ${bgClass}`}
       >
         {icon}
       </div>

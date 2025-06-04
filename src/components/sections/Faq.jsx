@@ -13,7 +13,7 @@ export default function Faq({ colorMode }) {
   // Classes de tema
   const bgClasses = {
     dark: "bg-darker",
-    light: "bg-lighter",
+    light: "squares",
     default: "squares",
   };
   const textClasses = {

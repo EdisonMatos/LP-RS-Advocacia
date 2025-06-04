@@ -8,7 +8,7 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
   // Definindo cores de fundo com base no tema
   const backgroundClasses = {
     dark: "from-black to-black",
-    light: "from-white to-white",
+  light: "bg-[#F2F1F1]",
     default: "from-bgSectionDark to-darker",
   };
 
@@ -30,7 +30,7 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
             <div className="flex flex-col w-full desktop1:w-[50%] desktop1:mr-[20px]">
               {/* MiniTag preta */}
               <MotionDivDownToUp>
-                <div className="flex justify-center w-auto text-center desktop1:justify-start desktop1:text-left font-secondFont text-paragraph4 text-black">
+                <div className="flex justify-center w-auto text-center desktop1:justify-start desktop1:text-left font-secondFont text-paragraph4 text-labelsIcons">
                   <p className="mb-[16px] bg-primary text-paragraph2 rounded-md px-[16px] py-[6px] inline-block">
                     {content.texts.hero.miniTag}
                   </p>
@@ -122,7 +122,7 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
             <div className="flex justify-center w-full tablet1:w-[450px] desktop1:w-[42%] desktop2:w-[42.8%]">
               <MotionDivDownToUp className="relative flex justify-center w-full">
                 <div
-                  className="bg-top rounded-xl w-full phone1:h-[300px] phone1:max-w-[300px] phone2:h-[355px] phone2:max-w-[355px] phone3:h-[405px] phone3:max-w-[405px] tablet1:h-[576px] tablet1:min-w-[576px] tablet2:h-[690px] tablet2:min-w-[690px] desktop1:h-[400px] desktop1:min-w-[200px] desktop2:h-[400px] desktop2:min-w-[400px] bg-cover bg-no-repeat desktop1:shadow-custom-opacity desktop1:shadow-black/30"
+                  className="bg-top rounded-xl w-full phone1:h-[300px] phone1:max-w-[300px] phone2:h-[355px] phone2:max-w-[355px] phone3:h-[405px] phone3:max-w-[405px] tablet1:h-[576px] tablet1:min-w-[576px] tablet2:h-[690px] tablet2:min-w-[690px] desktop1:h-[400px] desktop1:min-w-[200px] desktop2:h-[400px] desktop2:min-w-[400px] bg-cover bg-no-repeat desktop1:shadow-custom-opacity desktop1:shadow-primary/30"
                   style={{
                     backgroundImage: `url(${content.texts.hero.heroDefaultImage})`,
                   }}

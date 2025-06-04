@@ -3,15 +3,16 @@ export const content = ["./src/**/*.{js,jsx,ts,tsx}"];
 export const theme = {
   extend: {
     colors: {
-      primary: "#D8DADA",
+      primary: "#1C3A3E",
       secondary: "#000000",
       bgSectionLight: "#FFFFFF",
-      bgSectionDark: "#1C3A3E",
+      bgSectionDark: "#D8DADA",
       links: "#0189BB",
       buttonColor: "#DBB14C",
       lighter: "#FFFFFF",
       darker: "#000000",
-      labelsIcons: "#000000",
+      labelsIcons: "#fff",
+      fading: "#EDEDED"
     },
     boxShadow: {
       "custom-opacity": "-20px 20px 0px", // 30% de opacidade
