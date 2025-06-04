@@ -58,7 +58,7 @@ export default function Button({
         <MotionDivDownToUp className="w-auto">
           <button
             onClick={onClick}
-            className={`flex ${className} ${sizeFeatures} bg-primary flex-row items-center justify-around transition ${color} text-secondary desktop1:hover:scale-110`}
+            className={`flex ${className} ${sizeFeatures} bg-primary flex-row items-center justify-around transition ${color} text-labelsIcons desktop1:hover:scale-110`}
           >
             <div
               className={`flex items-center text-center ${gap} min-h-[24px]`}
@@ -76,7 +76,7 @@ export default function Button({
         <div className="w-auto">
           <button
             onClick={onClick}
-            className={`flex ${className} ${sizeFeatures} bg-primary flex-row items-center justify-around transition ${color} text-secondary desktop1:hover:scale-110`}
+            className={`flex ${className} ${sizeFeatures} bg-primary flex-row items-center justify-around transition ${color} text-labelsIcons desktop1:hover:scale-110`}
           >
             <div
               className={`flex items-center text-center ${gap} min-h-[24px]`}
