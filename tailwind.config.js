@@ -12,6 +12,7 @@ export const theme = {
       lighter: "#FFFFFF",
       darker: "#000000",
       labelsIcons: "#fff",
+      fading: "#EDEDED"
     },
     boxShadow: {
       "custom-opacity": "-20px 20px 0px", // 30% de opacidade

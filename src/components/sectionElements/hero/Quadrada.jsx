@@ -8,7 +8,7 @@ export default function Quadrada({ appDownloadButtons, colorMode }) {
   // Definindo cores de fundo com base no tema
   const backgroundClasses = {
     dark: "from-black to-black",
-    light: "from-white to-white",
+  light: "bg-[#F2F1F1]",
     default: "from-bgSectionDark to-darker",
   };
 

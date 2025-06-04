@@ -12,7 +12,7 @@ export default function Cta({ colorMode = "default" }) {
   // Definir classes de tema
   const bgClasses = {
     dark: "bg-darker",
-    light: "bg-lighter",
+    light: "squares",
     default: "squares",
   };
   const textClasses = {
