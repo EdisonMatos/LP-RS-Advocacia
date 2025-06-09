@@ -126,18 +126,17 @@ const content = {
       miniTag: "ADVOCACIA PREVIDENCIÁRIA EM JOÃO PESSOA - PB",
       title: (
         <h1 className="mb-[16px]">
-          Você tem dinheiro parado
-          <span className="text-primary"> no INSS?</span>
+          Quer saber se pode ter direito de receber um benefício
+          <span className="text-primary"> do INSS?</span>
         </h1>
       ),
-      subtitle:
-        "Milhares de pessoas têm direito e não sabem. Descubra agora se você é uma delas.",
+      subtitle: "Descubra se tem direito a um benefício!",
       heroImgPhone: heroImgPhone, // img da pessoa mobile
       heroDesktop: heroImgDesktop, //bg com foto da pessoa
       heroImg: bgHeroImg, //fundo da Hero
       heroDefaultImage: heroDefaultImg, //imagem da heroDefault Mobile
       backgroundPerson: backgroundPersonMobile,
-      ctaButtonText: "Quero verificar meu direito",
+      ctaButtonText: "Entre em contato conosco",
       obsHero: {
         icon: (
           <svg
@@ -191,7 +190,7 @@ const content = {
       imgDivisor: imgDivisor,
       card1: {
         img: featuresImg1,
-        title: "Aposentadoria por Contribuição",
+        title: "Aposentadoria por contribuição",
         subtitle: "Cálculo e revisão do tempo para o melhor benefício.",
         description: (
           <div>
@@ -226,8 +225,9 @@ const content = {
       },
       card2: {
         img: featuresImg2,
-        title: "Aposentadoria por Idade",
-        subtitle: "Entrada segura e correta na sua aposentadoria.",
+        title: "Aposentadoria",
+        subtitle:
+          "Planejamento e requerimento para a melhor aposentadoria possível.",
         description: (
           <div>
             A_Definir
@@ -263,8 +263,9 @@ const content = {
       },
       card3: {
         img: featuresImg3,
-        title: "Benefício por Incapacidade",
-        subtitle: "Apoio em auxílio-doença e aposentadoria.",
+        title: "BPC LOAS",
+        subtitle:
+          "Acesso ao benefício assistencial para idosos e pessoas com deficiência.",
         description: (
           <div>
             A_Definir <br />
@@ -298,8 +299,9 @@ const content = {
       },
       card4: {
         img: featuresImg4,
-        title: "Pensão e Auxílio-Reclusão",
-        subtitle: "Garantia de direitos para dependentes do INSS.",
+        title: "Análise de benefícios previdenciários",
+        subtitle:
+          "Atendimento especializado para dependentes com direito a benefícios do INSS.",
         description: (
           <div>
             A_Definir
