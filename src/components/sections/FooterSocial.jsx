@@ -71,7 +71,7 @@ export default function FooterSocial({
               <PhoneFooter colorMode={colorMode} />
               {phoneSecundario && <PhoneSecundario />}
               {phoneTerciario && <PhoneTerciario />}
-              <EmailFooter />
+              {/* <EmailFooter /> */}
               {emailSecundario && <EmailSecundarioFooter />}
               {addres && <AdressFooter />}
               {addresSecundario && <AdressSecundarioFooter />}
