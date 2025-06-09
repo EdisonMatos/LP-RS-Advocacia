@@ -55,7 +55,7 @@ const currentYear = new Date().getFullYear();
 export const infos = {
   name: "RS Advocacia",
   email: "contato", // Email desejado pelo cliente
-  emailSecundario: "A_Definir", // Email desejado pelo cliente
+  emailSecundario: "contato.rsprev@gmail.com", // Email desejado pelo cliente
   domain: "rsadvprev.com.br", // Sem "www"
   phone: {
     ddd: "83",
