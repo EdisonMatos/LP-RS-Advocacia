@@ -74,10 +74,7 @@ export const infos = {
   },
   endereco: (
     <div>
-      <p>Endereço:</p>
-      <p>A_Definir</p>
-      <p>A_Definir</p>
-      <p>A_Definir</p>
+      <p>João Pessoa - PB</p>
     </div>
   ),
   enderecoSecundario: (
@@ -123,20 +120,20 @@ const content = {
       ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: "ADVOCACIA PREVIDENCIÁRIA EM JOÃO PESSOA - PB",
+      miniTag: "ADVOCACIA PREVIDENCIÁRIA",
       title: (
         <h1 className="mb-[16px]">
-          Quer saber se pode ter direito de receber um benefício
+          Está em dúvida se tem direito a um benefício
           <span className="text-primary"> do INSS?</span>
         </h1>
       ),
-      subtitle: "Descubra se tem direito a um benefício!",
+      subtitle: "FAÇA SUA ANÁLISE GRATUITA",
       heroImgPhone: heroImgPhone, // img da pessoa mobile
       heroDesktop: heroImgDesktop, //bg com foto da pessoa
       heroImg: bgHeroImg, //fundo da Hero
       heroDefaultImage: heroDefaultImg, //imagem da heroDefault Mobile
       backgroundPerson: backgroundPersonMobile,
-      ctaButtonText: "Entre em contato conosco",
+      ctaButtonText: "ENTRE EM CONTATO",
       obsHero: {
         icon: (
           <svg
@@ -156,7 +153,7 @@ const content = {
             <path d="m16 18 2 2 4-4" />
           </svg>
         ),
-        text: "Atendimento em João Pessoa, Recife e Natal. Online para todo território nacional.",
+        text: "Atendimentos presenciais em João Pessoa, Recife e Natal. Atendimento online para todo o Brasil.",
       },
       ctaButtonAriaLabel:
         "Botão para chamada de ação para contato pelo whatsapp",
