@@ -49,7 +49,7 @@ export default function Index() {
       <Faq colorMode={colorMode} />
       <FooterSocial
         colorMode={colorMode}
-        addres={false}
+        addres={true}
         phoneSecundario={false}
         phoneTerciario={false}
         emailSecundario={true}

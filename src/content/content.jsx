@@ -74,10 +74,7 @@ export const infos = {
   },
   endereco: (
     <div>
-      <p>Endereço:</p>
-      <p>A_Definir</p>
-      <p>A_Definir</p>
-      <p>A_Definir</p>
+      <p>João Pessoa - PB</p>
     </div>
   ),
   enderecoSecundario: (
@@ -123,20 +120,20 @@ const content = {
       ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: "ADVOCACIA PREVIDENCIÁRIA EM JOÃO PESSOA - PB",
+      miniTag: "ADVOCACIA PREVIDENCIÁRIA",
       title: (
         <h1 className="mb-[16px]">
-          Quer saber se pode ter direito de receber um benefício
+          Está em dúvida se tem direito a um benefício
           <span className="text-primary"> do INSS?</span>
         </h1>
       ),
-      subtitle: "Descubra se tem direito a um benefício!",
+      subtitle: "FAÇA SUA ANÁLISE GRATUITA",
       heroImgPhone: heroImgPhone, // img da pessoa mobile
       heroDesktop: heroImgDesktop, //bg com foto da pessoa
       heroImg: bgHeroImg, //fundo da Hero
       heroDefaultImage: heroDefaultImg, //imagem da heroDefault Mobile
       backgroundPerson: backgroundPersonMobile,
-      ctaButtonText: "Entre em contato conosco",
+      ctaButtonText: "ENTRE EM CONTATO",
       obsHero: {
         icon: (
           <svg
@@ -156,7 +153,7 @@ const content = {
             <path d="m16 18 2 2 4-4" />
           </svg>
         ),
-        text: "Atendimento em João Pessoa, Recife e Natal. Online para todo território nacional.",
+        text: "Atendimentos presenciais em João Pessoa, Recife e Natal. Atendimento online para todo o Brasil.",
       },
       ctaButtonAriaLabel:
         "Botão para chamada de ação para contato pelo whatsapp",
@@ -183,15 +180,16 @@ const content = {
     },
     features: {
       miniTag: "ÁREA DE ATUAÇÃO",
-      title: "Especialista em Aposentadorias e Benefícios do INSS",
+      title: "Aposentadorias e Benefícios do INSS",
       subtitle:
         "Atuação dedicada a garantir seus direitos previdenciários com segurança e eficiência.",
       imgFeatures: imgFeatures,
       imgDivisor: imgDivisor,
       card1: {
         img: featuresImg1,
-        title: "Aposentadoria por contribuição",
-        subtitle: "Cálculo e revisão do tempo para o melhor benefício.",
+        title: "Revisão de Benefícios",
+        subtitle:
+          "Correção de valores e identificação de erros no cálculo do seu benefício previdenciário.",
         description: (
           <div>
             A_Definir
@@ -299,9 +297,9 @@ const content = {
       },
       card4: {
         img: featuresImg4,
-        title: "Análise de benefícios previdenciários",
+        title: "Benefícios por Incapacidade",
         subtitle:
-          "Atendimento especializado para dependentes com direito a benefícios do INSS.",
+          "Solicitação e defesa de auxílios e aposentadorias para quem não pode trabalhar por motivos de saúde.",
         description: (
           <div>
             A_Definir
@@ -479,10 +477,9 @@ const content = {
     cta: {
       backgroundImg: ctaWhatsappImgBg,
       miniTag: "FALE CONOSCO",
-      title: "Quer saber se pode ter direito de receber um benefício do INSS?",
-      subtitle:
-        "Converse com nossa equipe. Estamos prontos para oferecer a orientação jurídica de que você precisa.",
-      ctaButtonText: "Entre em contato conosco",
+      title: "Está em dúvida se tem direito a um benefício do INSS?",
+      subtitle: "",
+      ctaButtonText: "Entre em contato",
     },
     steps: {
       miniTag: "PASSO A PASSO",
