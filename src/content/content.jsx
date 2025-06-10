@@ -180,15 +180,16 @@ const content = {
     },
     features: {
       miniTag: "ÁREA DE ATUAÇÃO",
-      title: "Especialista em Aposentadorias e Benefícios do INSS",
+      title: "Aposentadorias e Benefícios do INSS",
       subtitle:
         "Atuação dedicada a garantir seus direitos previdenciários com segurança e eficiência.",
       imgFeatures: imgFeatures,
       imgDivisor: imgDivisor,
       card1: {
         img: featuresImg1,
-        title: "Aposentadoria por contribuição",
-        subtitle: "Cálculo e revisão do tempo para o melhor benefício.",
+        title: "Revisão de Benefícios",
+        subtitle:
+          "Correção de valores e identificação de erros no cálculo do seu benefício previdenciário.",
         description: (
           <div>
             A_Definir
@@ -296,9 +297,9 @@ const content = {
       },
       card4: {
         img: featuresImg4,
-        title: "Análise de benefícios previdenciários",
+        title: "Benefícios por Incapacidade",
         subtitle:
-          "Atendimento especializado para dependentes com direito a benefícios do INSS.",
+          "Solicitação e defesa de auxílios e aposentadorias para quem não pode trabalhar por motivos de saúde.",
         description: (
           <div>
             A_Definir
