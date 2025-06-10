@@ -477,10 +477,9 @@ const content = {
     cta: {
       backgroundImg: ctaWhatsappImgBg,
       miniTag: "FALE CONOSCO",
-      title: "Quer saber se pode ter direito de receber um benefício do INSS?",
-      subtitle:
-        "Converse com nossa equipe. Estamos prontos para oferecer a orientação jurídica de que você precisa.",
-      ctaButtonText: "Entre em contato conosco",
+      title: "Está em dúvida se tem direito a um benefício do INSS?",
+      subtitle: "",
+      ctaButtonText: "Entre em contato",
     },
     steps: {
       miniTag: "PASSO A PASSO",
