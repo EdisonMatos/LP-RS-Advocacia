@@ -74,7 +74,13 @@ export const infos = {
   },
   endereco: (
     <div>
-      <p>João Pessoa - PB</p>
+      <p>Av. Rio Grande do Sul,</p>
+      <p>1345, salas 210 e 211,</p>
+      <p>
+        Bairro dos Estados - <br />
+        João Pessoa - PB,
+      </p>
+      <p>CEP: 58030-020</p>
     </div>
   ),
   enderecoSecundario: (
