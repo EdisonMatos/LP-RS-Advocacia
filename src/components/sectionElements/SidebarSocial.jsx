@@ -12,39 +12,53 @@ import {
 } from "lucide-react";
 import { Link } from "react-scroll";
 import content from "../../content/content";
-import ButtonWithIconNavbar from "../interactives/ButtonWithIconNavbar";
+import "../../../src/index.css";
 
 export default function SidebarSocial({ colorMode }) {
   const [visible, setVisible] = useState(false);
   const [submenuVisible, setSubmenuVisible] = useState(true);
-  const [reportsSubmenuVisible, setReportsSubmenuVisible] = useState(false);
-  const [revenueSubmenuVisible, setRevenueSubmenuVisible] = useState(false);
-  const [aplicationSubmenuVisible, setAplicationSubmenuVisible] =
-    useState(true);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const toggleSidebar = () => {
     setVisible(!visible);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setVisible(false); // fecha a sidebar após clicar
+    }
+  };
+
+  const servicesItems = [
+    {
+      label: "- Revisão de Benefícios",
+      command: () => scrollToSection("service"),
+    },
+    { label: "- Aposentadoria", command: () => scrollToSection("service") },
+    { label: "- BPC LOAS", command: () => scrollToSection("service") },
+    {
+      label: "- Benefícios por Incapacidade",
+      command: () => scrollToSection("service"),
+    },
+    { label: "- Salário Maternidade", command: () => scrollToSection("service") },
+    {
+      label: "- Consultoria Jurídica",
+      command: () => scrollToSection("service"),
+    },
+  ];
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="inset-0 z-10 flex">
+      {/* Overlay */}
       <div
         className={`${
           visible ? "block" : "hidden"
@@ -53,20 +67,13 @@ export default function SidebarSocial({ colorMode }) {
       />
 
       <div className="flex justify-center card">
-        {/* <<<<<<<<<<<<<<< Cor do hamburger >>>>>>>>>>>>>> */}
-
+        {/* Hamburger */}
         <AlignJustify
           className={`p-button-rounded p-button-outlined lg:hidden ${
-            colorMode
-              ? scrolled
-                ? "text-primary"
-                : "text-primary"
-              : "text-primary"
+            colorMode ? "text-primary" : "text-primary"
           } w-[40px] h-[40px]`}
           onClick={() => setVisible(true)}
         />
-
-        {/* <<<<<<<<<<<<<<< Cor do hamburger >>>>>>>>>>>>>> */}
 
         <Sidebar
           visible={visible}
@@ -76,7 +83,6 @@ export default function SidebarSocial({ colorMode }) {
             <div
               id="app-sidebar-2"
               className={`${
-
                 colorMode
                   ? "bg-bgSectionDark"
                   : "absolute top-0 left-0 flex-shrink-0 h-screen border-r-[1px] select-none bg-bgSectionDark surface-section lg:hidden lg:static z-1 surface-border border-neutral-700"
@@ -84,6 +90,7 @@ export default function SidebarSocial({ colorMode }) {
               style={{ width: "280px" }}
             >
               <div className="flex flex-col h-full">
+                {/* Header */}
                 <div className="flex items-center justify-between flex-shrink-0 px-4 pt-6 ">
                   <span className="inline-flex items-center gap-2">
                     <img
@@ -100,215 +107,99 @@ export default function SidebarSocial({ colorMode }) {
                       icon="pi pi-times"
                       rounded
                       outlined
-                      className={`${
-
-                        colorMode
-                          ? "text-primary"
-                          : "h-2rem w-2rem p-[5px] text-white"
-                      }`}
-                    ></Button>
+                      className={`${colorMode ? "text-primary" : "text-white"}`}
+                    />
                   </span>
                 </div>
+
                 <div className="h-screen overflow-y-auto">
                   <hr className="m-5 mx-3 border-top-1 surface-border border-primary" />
                   <ul className="p-3 m-0 list-none">
-                    <li>
-                      {submenuVisible && (
-                        <ul
-                          className={`${
-
-                            colorMode
-                              ? "text-primary"
-                              : "p-0 m-0 -mt-[16px] overflow-hidden font-medium text-white"
-                          } list-none text-paragraph3 font-mainFont`}
-                        >
-                          <li>
-                            <a className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150">
-                              <HomeIcon />
-                              <span className="ml-[8px] ">
-                                <Link
-                                  to="home"
-                                  className="align-text-top cursor-pointer"
-                                  spy={true}
-                                  smooth={true}
-                                  duration={500}
-                                  offset={-100}
-                                  href="#"
-                                >
-                                  {content.texts.navbar.menuItems[0]}
-                                </Link>
-                              </span>
-                              <Ripple />
-                            </a>
-                          </li>
-                          <ul className="p-0 m-0 list-none">
-                            <li>
-                              <a className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150">
-                                <UserSearch />
-                                <span className="ml-[8px]">
-                                  <Link
-                                    to="service"
-                                    className="align-text-top cursor-pointer"
-                                    spy={true}
-                                    smooth={true}
-                                    duration={500}
-                                    offset={-70}
-                                    href="#"
-                                  >
-                                    {content.texts.navbar.menuItems[1]}
-                                  </Link>
-                                </span>
-                                <Ripple />
-                              </a>
-                            </li>
-                            <li>
-                              <a className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150">
-                                <ServerIcon />
-                                <span className="ml-[8px]">
-                                  <Link
-                                    to="about"
-                                    className="align-text-top cursor-pointer"
-                                    spy={true}
-                                    smooth={true}
-                                    duration={500}
-                                    offset={-50}
-                                    href="#"
-                                  >
-                                    {content.texts.navbar.menuItems[2]}
-                                  </Link>
-                                </span>
-                                <Ripple />
-                              </a>
-                            </li>
-
-                            <li>
-                              <a className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150">
-                                <HelpCircle />
-                                <span className="ml-[8px]">
-                                  <Link
-                                    to="faq"
-                                    className="align-text-top cursor-pointer"
-                                    spy={true}
-                                    smooth={true}
-                                    duration={500}
-                                    offset={-70}
-                                    href="#"
-                                  >
-                                    {content.texts.navbar.menuItems[3]}
-                                  </Link>
-                                </span>
-                                <Ripple />
-                              </a>
-                            </li>
-                          </ul>
-                        </ul>
-                      )}
-                    </li>
-
-                    {/* Início Botões sociais */}
-
-                    {/* <hr className="m-5 mx-3 mb-8 border-top-1 surface-border" />
-                    <div className=" flex flex-col gap-[16px] w-full px-[2px]">
-                      <ButtonWithIconNavbar
-                        className="w-full"
-                        link={content.texts.infos.instagramProfile}
-                        label="Siga a gente no Instagram"
-                        icon={
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-instagram"
+                    {submenuVisible && (
+                      <ul
+                        className={`${
+                          colorMode
+                            ? "text-primary"
+                            : "p-0 m-0 -mt-[16px] overflow-hidden font-medium text-white"
+                        } list-none text-paragraph3 font-mainFont`}
+                      >
+                        {/* Home */}
+                        <li>
+                          <a
+                            className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150"
+                            onClick={() => scrollToSection("home")}
                           >
-                            <rect
-                              width="20"
-                              height="20"
-                              x="2"
-                              y="2"
-                              rx="5"
-                              ry="5"
-                            />
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                          </svg>
-                        }
-                      />
+                            <HomeIcon />
+                            <span className="ml-[8px]">
+                              {content.texts.navbar.menuItems[0]}
+                            </span>
+                            <Ripple />
+                          </a>
+                        </li>
 
-                      <ButtonWithIconNavbar
-                        className="w-full"
-                        link={content.texts.infos.facebookProfile}
-                        label="Siga a gente no Facebook"
-                        icon={
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-facebook"
+                        {/* Services com submenu */}
+                        <li>
+                          <a
+                            className="flex items-center w-full p-3 cursor-pointer border-round hover:surface-100"
+                            onClick={() => setServicesOpen(!servicesOpen)}
                           >
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                          </svg>
-                        }
-                      />
+                            <ServerIcon />
+                            <span className="ml-[8px]">
+                              {content.texts.navbar.menuItems[1]}
+                            </span>
+                          </a>
 
-                      <ButtonWithIconNavbar
-                        className="w-full"
-                        link={content.texts.infos.linkedInProfile}
-                        label="Siga a gente no Linkedin"
-                        icon={
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-linkedin"
+                          {servicesOpen && (
+                            <ul className="pl-6 list-none bg-black/10">
+                              {servicesItems.map((item, idx) => (
+                                <li key={idx}>
+                                  <a
+                                    className="flex items-center w-full p-2 cursor-pointer border-round hover:surface-100"
+                                    onClick={item.command}
+                                  >
+                                    {item.label}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+
+                        {/* About */}
+                        <li>
+                          <a
+                            className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150"
+                            onClick={() => scrollToSection("about")}
                           >
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect width="4" height="12" x="2" y="9" />
-                            <circle cx="4" cy="4" r="2" />
-                          </svg>
-                        }
-                      />
-                    </div> */}
+                            <UserSearch />
+                            <span className="ml-[8px]">
+                              {content.texts.navbar.menuItems[2]}
+                            </span>
+                            <Ripple />
+                          </a>
+                        </li>
 
-                    {/* Fim Botões sociais */}
-
-                    {/* Início Foto do About */}
-
-                    {/* <a
-                      v-ripple
-                      className="bottom-0 left-0 flex items-center justify-center gap-2 p-3 m-3 transition-colors cursor-pointer phone2:absolute border-round text-700 hover:surface-100 transition-duration-150 p-ripple"
-                    >
-                      <img
-                        src={content.texts.about.imagem.img}
-                        alt={content.texts.about.imagem.alt}
-                        className="w-[100%]"
-                      />
-                    </a> */}
-
-                    {/* Início Foto do About */}
+                        {/* FAQ */}
+                        <li>
+                          <a
+                            className="flex items-center w-full p-3 transition-colors cursor-pointer p-ripple border-round text-700 hover:surface-100 transition-duration-150"
+                            onClick={() => scrollToSection("faq")}
+                          >
+                            <HelpCircle />
+                            <span className="ml-[8px]">
+                              {content.texts.navbar.menuItems[3]}
+                            </span>
+                            <Ripple />
+                          </a>
+                        </li>
+                      </ul>
+                    )}
                   </ul>
                 </div>
               </div>
             </div>
           )}
-        ></Sidebar>
+        />
       </div>
     </div>
   );
