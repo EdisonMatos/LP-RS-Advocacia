@@ -43,8 +43,9 @@ export default function Features6cards({ modal, colorMode }) {
                   icon={content.texts.features.card1.icon}
                   title={content.texts.features.card1.title}
                   paragraph={content.texts.features.card1.subtitle}
-                  className="tablet1:mb-[26px] desktop1:mb-0"
-                  colorMode={colorMode}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card1.title}
+                  modalContent={content.texts.features.card1.description}
                 />
               </MotionDivDownToUp>
               <MotionDivDownToUp>
@@ -52,7 +53,9 @@ export default function Features6cards({ modal, colorMode }) {
                   icon={content.texts.features.card2.icon}
                   title={content.texts.features.card2.title}
                   paragraph={content.texts.features.card2.subtitle}
-                  colorMode={colorMode}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card2.title}
+                  modalContent={content.texts.features.card2.description}
                 />
               </MotionDivDownToUp>
               <MotionDivDownToUp>
@@ -60,7 +63,9 @@ export default function Features6cards({ modal, colorMode }) {
                   icon={content.texts.features.card3.icon}
                   title={content.texts.features.card3.title}
                   paragraph={content.texts.features.card3.subtitle}
-                  colorMode={colorMode}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card3.title}
+                  modalContent={content.texts.features.card3.description}
                 />
               </MotionDivDownToUp>
             </div>
@@ -75,30 +80,34 @@ export default function Features6cards({ modal, colorMode }) {
             </MotionDivDownToUp>
 
             <div className="col3 desktop1:w-[28%] flex flex-col items-center">
-              <MotionDivDownToUp className=" flex items-center w-full tablet1:w-[290px] desktop1:w-[250px]">
+              <MotionDivDownToUp>
                 <IconFeatureCard
                   icon={content.texts.features.card4.icon}
                   title={content.texts.features.card4.title}
                   paragraph={content.texts.features.card4.subtitle}
-                  className="tablet1:mb-[26px] desktop1:mb-0"
-                  colorMode={colorMode}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card4.title}
+                  modalContent={content.texts.features.card4.description}
                 />
               </MotionDivDownToUp>
               <MotionDivDownToUp>
                 <IconFeatureCard
-                  icon={content.texts.features.card3.icon}
-                  title={content.texts.features.card3.title}
-                  paragraph={content.texts.features.card3.subtitle}
-                  colorMode={colorMode}
+                  icon={content.texts.features.card5.icon}
+                  title={content.texts.features.card5.title}
+                  paragraph={content.texts.features.card5.subtitle}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card5.title}
+                  modalContent={content.texts.features.card5.description}
                 />
               </MotionDivDownToUp>
-
               <MotionDivDownToUp>
                 <IconFeatureCard
-                  icon={content.texts.features.card3.icon}
-                  title={content.texts.features.card3.title}
-                  paragraph={content.texts.features.card3.subtitle}
-                  colorMode={colorMode}
+                  icon={content.texts.features.card6.icon}
+                  title={content.texts.features.card6.title}
+                  paragraph={content.texts.features.card6.subtitle}
+                  colorMode="light"
+                  modalTitle={content.texts.features.card6.title}
+                  modalContent={content.texts.features.card6.description}
                 />
               </MotionDivDownToUp>
             </div>

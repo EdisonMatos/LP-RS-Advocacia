@@ -198,10 +198,10 @@ const content = {
           "Correção de valores e identificação de erros no cálculo do seu benefício previdenciário.",
         description: (
           <div>
-            A_Definir
-            <br />
-            <br />
-            A_Definir
+            Analisamos seu histórico previdenciário para identificar erros ou
+            descontos indevidos, garantindo que você receba o valor correto do
+            seu benefício. Auxiliamos em todos os procedimentos junto ao INSS,
+            desde a solicitação da revisão até o acompanhamento do resultado.
           </div>
         ),
         imgModal: imgFeaturesCardModal1,
@@ -216,12 +216,13 @@ const content = {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-badge-percent-icon lucide-badge-percent"
+            class="lucide lucide-file-text-icon lucide-file-text"
           >
-            <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-            <path d="m15 9-6 6" />
-            <path d="M9 9h.01" />
-            <path d="M15 15h.01" />
+            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+            <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+            <path d="M10 9H8" />
+            <path d="M16 13H8" />
+            <path d="M16 17H8" />
           </svg>
         ),
         buttonLabelModal: "Fale Conosco",
@@ -234,10 +235,10 @@ const content = {
           "Planejamento e requerimento para a melhor aposentadoria possível.",
         description: (
           <div>
-            A_Definir
-            <br />
-            <br />
-            A_Definir
+            Oferecemos planejamento personalizado para sua aposentadoria,
+            orientando sobre o melhor momento de se aposentar, cálculo de tempo
+            de contribuição e tipos de aposentadoria disponíveis, além de
+            acompanhar todo o processo de requerimento junto ao INSS.
           </div>
         ),
         imgModal: imgFeaturesCardModal2,
@@ -252,14 +253,10 @@ const content = {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-calendar-clock-icon lucide-calendar-clock"
+            class="lucide lucide-clock-icon lucide-clock"
           >
-            <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
-            <path d="M16 2v4" />
-            <path d="M8 2v4" />
-            <path d="M3 10h5" />
-            <path d="M17.5 17.5 16 16.3V14" />
-            <circle cx="16" cy="16" r="6" />
+            <path d="M12 6v6l4 2" />
+            <circle cx="12" cy="12" r="10" />
           </svg>
         ),
         buttonLabelModal: "Fale Conosco",
@@ -272,9 +269,10 @@ const content = {
           "Acesso ao benefício assistencial para idosos e pessoas com deficiência.",
         description: (
           <div>
-            A_Definir <br />
-            <br />
-            A_Definir
+            Ajudamos pessoas com deficiência e idosos de baixa renda a acessar o
+            Benefício de Prestação Continuada (BPC/LOAS). Realizamos análise de
+            requisitos, protocolo do pedido e recursos em caso de indeferimento,
+            garantindo que você receba o que tem direito.
           </div>
         ),
         imgModal: imgFeaturesCardModal3,
@@ -289,13 +287,11 @@ const content = {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-stethoscope-icon lucide-stethoscope"
+            class="lucide lucide-user-check-icon lucide-user-check"
           >
-            <path d="M11 2v2" />
-            <path d="M5 2v2" />
-            <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
-            <path d="M8 15a6 6 0 0 0 12 0v-3" />
-            <circle cx="20" cy="10" r="2" />
+            <path d="m16 11 2 2 4-4" />
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
           </svg>
         ),
         buttonLabelModal: "Fale Conosco",
@@ -308,10 +304,10 @@ const content = {
           "Solicitação e defesa de auxílios e aposentadorias para quem não pode trabalhar por motivos de saúde.",
         description: (
           <div>
-            A_Definir
-            <br />
-            A_Definir
-            <br />
+            Atuamos na solicitação e defesa de auxílios e aposentadorias por
+            incapacidade, auxiliando quem não pode trabalhar por motivos de
+            saúde. Cuidamos da documentação, perícias e recursos junto ao INSS
+            para assegurar seu direito ao benefício.
           </div>
         ),
         imgModal: imgFeaturesCardModal4,
@@ -326,12 +322,9 @@ const content = {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-users-icon lucide-users"
+            class="lucide lucide-activity-icon lucide-activity"
           >
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-            <circle cx="9" cy="7" r="4" />
+            <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
           </svg>
         ),
         buttonLabelModal: "Fale Conosco",
@@ -339,14 +332,15 @@ const content = {
       },
       card5: {
         img: featuresImg4,
-        title: "A_Definir",
-        subtitle: "A_Definir",
+        title: "Salário Maternidade",
+        subtitle:
+          "Análise de contribuições, orientação para quem nunca contribuiu, pedido do benefício e recurso em negativa do INSS.",
         description: (
           <div>
-            A_Definir
-            <br />
-            <br />
-            A_Definir
+            Verificamos seu direito ao salário-maternidade, analisamos
+            contribuições anteriores e orientamos quem nunca contribuiu.
+            Realizamos o protocolo do pedido, acompanhamento do processo e
+            recursos em caso de negativa do INSS.
           </div>
         ),
         imgModal: imgFeaturesCardModal4,
@@ -361,11 +355,45 @@ const content = {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"
+            class="lucide lucide-baby-icon lucide-baby"
           >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-            <path d="M12 18V6" />
+            <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
+            <path d="M15 12h.01" />
+            <path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" />
+            <path d="M9 12h.01" />
+          </svg>
+        ),
+        buttonLabelModal: "Fale Conosco",
+        buttonLabel: "Saiba Mais",
+      },
+      card6: {
+        img: featuresImg4,
+        title: "Consultoria Jurídica",
+        subtitle:
+          "Orientação completa sobre direitos previdenciários, análise de casos e apoio em todas as etapas junto ao INSS.",
+        description: (
+          <div>
+            Oferecemos orientação completa sobre direitos previdenciários,
+            análise de casos e suporte em todas as etapas junto ao INSS,
+            incluindo revisão de benefícios, aposentadorias e outros direitos,
+            garantindo segurança e tranquilidade no processo.
+          </div>
+        ),
+        imgModal: imgFeaturesCardModal4,
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-book-icon lucide-book"
+          >
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
           </svg>
         ),
         buttonLabelModal: "Fale Conosco",
