@@ -1,13 +1,15 @@
+import { useState, useEffect, useRef } from "react";
+import { Menu } from "primereact/menu";
 import { Link } from "react-scroll";
-import content from "../../content/content";
-import { useState, useEffect } from "react";
-import IconButton from "../interactives/IconButton";
 import Button from "../interactives/Button";
 import { useNavigate } from "react-router-dom";
+import content from "../../content/content";
+import { FaBaby } from "react-icons/fa";
 
 export default function ListGroupSocial({ colorMode = "default" }) {
   const navigate = useNavigate();
   const [scrolling, setScrolling] = useState(false);
+  const menuRef = useRef(null);
 
   const handleScroll = () => {
     setScrolling(window.scrollY > 0);
@@ -37,31 +39,139 @@ export default function ListGroupSocial({ colorMode = "default" }) {
     return "bg-white";
   };
 
-  const textShadow = colorMode === "dark" || colorMode === "default"
-    ? "[text-shadow:_2px_2px_3px_rgb(0_0_0_/_0%)]"
-    : "";
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const textShadow =
+    colorMode === "dark" || colorMode === "default"
+      ? "[text-shadow:_2px_2px_3px_rgb(0_0_0_/_0%)]"
+      : "";
+
+  // itens do menu cascata (services)
+  const servicesItems = [
+    {
+      label: "Revisão de Benefícios",
+      icon: "pi pi-file",
+      command: () => scrollToSection("service"),
+    },
+    {
+      label: "Aposentadoria",
+      icon: "pi pi-calendar",
+      command: () => scrollToSection("service"),
+    },
+    {
+      label: "BPC LOAS",
+      icon: "pi pi-users",
+      command: () => scrollToSection("service"),
+    },
+    {
+      label: "Benefícios por Incapacidade",
+      icon: "pi pi-heart",
+      command: () => scrollToSection("service"),
+    },
+    {
+      label: "Salário Maternidade",
+      icon: <FaBaby className="mr-2" />,
+      command: () => scrollToSection("service"),
+    },
+    {
+      label: "Consultoria Jurídica",
+      icon: "pi pi-briefcase",
+      command: () => scrollToSection("service"),
+    },
+  ];
 
   return (
-
-    <ul className={`h-14 hidden desktop1:flex my-auto items-center justify-end tablet1:items-center desktop1:gap-8 desktop2:gap-8 w-auto font-normal text-paragraph3 font-secondFont ${getTextColor()}`}>
-      {["home", "service", "about", "faq"].map((section, index) => (
-        <li key={section} className="transition group h-[24px]">
-          <Link
-            to={section}
-            className="relative font-semibold cursor-pointer"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={-50}
+    <ul
+      className={`h-14 hidden desktop1:flex my-auto items-center justify-end tablet1:items-center desktop1:gap-8 desktop2:gap-8 w-auto font-normal text-paragraph3 font-secondFont ${getTextColor()}`}
+    >
+      {/* Home */}
+      <li className="transition group h-[24px]">
+        <Link
+          to="home"
+          className="relative font-semibold cursor-pointer"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-50}
+        >
+          <span
+            className={`h-[24px] inline-block ${getHoverTextColor()} ${textShadow}`}
           >
-            <span className={`h-[24px] inline-block ${getHoverTextColor()} ${textShadow}`}>
-              {content.texts.navbar.menuItems[index]}
-            </span>
-            <div className={`absolute -bottom-2 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getBorderColor()}`} />
-          </Link>
-        </li>
-      ))}
+            {content.texts.navbar.menuItems[0]}
+          </span>
+          <div
+            className={`absolute -bottom-2 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getBorderColor()}`}
+          />
+        </Link>
+      </li>
 
+      {/* Services com menu cascata */}
+      <li className="transition group h-[24px] relative">
+        <span
+          onClick={(e) => menuRef.current.toggle(e)}
+          className={`relative font-semibold cursor-pointer inline-block ${getHoverTextColor()} ${textShadow}`}
+        >
+          {content.texts.navbar.menuItems[1]}
+        </span>
+        <Menu
+          model={servicesItems}
+          popup
+          ref={menuRef}
+          className="font-secondFont text-paragraph3 font-normal"
+        />
+        <div
+          className={`absolute -bottom-2 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getBorderColor()}`}
+        />
+      </li>
+
+      {/* About */}
+      <li className="transition group h-[24px]">
+        <Link
+          to="about"
+          className="relative font-semibold cursor-pointer"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-50}
+        >
+          <span
+            className={`h-[24px] inline-block ${getHoverTextColor()} ${textShadow}`}
+          >
+            {content.texts.navbar.menuItems[2]}
+          </span>
+          <div
+            className={`absolute -bottom-2 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getBorderColor()}`}
+          />
+        </Link>
+      </li>
+
+      {/* FAQ */}
+      <li className="transition group h-[24px]">
+        <Link
+          to="faq"
+          className="relative font-semibold cursor-pointer"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-50}
+        >
+          <span
+            className={`h-[24px] inline-block ${getHoverTextColor()} ${textShadow}`}
+          >
+            {content.texts.navbar.menuItems[3]}
+          </span>
+          <div
+            className={`absolute -bottom-2 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getBorderColor()}`}
+          />
+        </Link>
+      </li>
+
+      {/* Botão Contato */}
       <li>
         <div className="flex gap-[10px] items-center">
           <Button
